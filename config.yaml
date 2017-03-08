@@ -1,0 +1,32 @@
+---
+global:
+  endpoint: https://mike42.wrtcloud.com/api/v1.0/
+  apikey: 53d490a43366bcbc80fbfab1b987d052
+  shop_max_days: 5
+  date_format: mm/dd/yy
+#  date_format: dd/mm/yy
+payment:
+  paypal: payment@kogtiroen.dk
+postage:
+  name: Afhetning p&aring; vores lager
+  description: Afhentning foregår i tidsrummet mellem 19 og 42 i Vridsl&oslash;selille statsf&aeligngsel.
+  zones:
+    - name: Udbringning, Sj&aelig;lland
+      description: Vi leverer og afhenter efter nærmere aftale i 3 timers intervaller mellem 9 og 17. Natafhentning kan aftales mod merpris.
+      price: 750
+      ranges:
+        - 1000-4999
+    - name: Udbringning, fyn
+      description: Vi leverer og afhenter efter nærmere aftale i 3 timers intervaller mellem 9 og 17. Natafhentning kan aftales mod merpris.
+      price: 1750
+      ranges:
+        - 5000-5999
+    - name: Udbringning, Jylland
+      description: Vi leverer og afhenter efter nærmere aftale i 3 timers intervaller mellem 9 og 17. Natafhentning kan aftales mod merpris.
+      price: 1750
+      ranges:
+        - 6100-9900 
+
+
+
+
