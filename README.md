@@ -23,9 +23,13 @@ and will most likeley not work on discount-offerings, minimal requirements:
 === Troubleshouting ===
 
 Problem: Call to undefined function yaml_parse()
+
 Explanation: You are missing the pecl yaml plugin as stated in the specification of the requirements in the begining of this document.
+
 Solution: (Debian)
-   apt-get install php-pear libyaml-dev php5-dev
-   pecl install yamL
-   sh -c "echo 'extension=yaml.so' >> /etc/php5/mods-available/yaml.ini"
-   php5enmod yaml
+<code>
+apt-get install php-pear libyaml-dev php5-dev
+pecl install yamL
+sh -c "echo 'extension=yaml.so' >> /etc/php5/mods-available/yaml.ini"
+php5enmod yaml
+</code>
