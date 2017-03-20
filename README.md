@@ -18,7 +18,11 @@ and will most likeley not work on discount-offerings, minimal requirements:
    - Asuming that the default-page on the site contains the [shop]-shortcode
 4: Config-file is config.yaml, should be mostly self-explanatory
 
+=== Changelog ===
 
+20/3/2017 : 	Added alternate config-file for legacy support. If no pecl-yaml module
+		exists, config.php will be loaded in its place and config.yaml will be
+		ignored.
 
 === Troubleshouting ===
 

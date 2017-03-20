@@ -9,7 +9,10 @@
  */
 session_start();
 
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+if (!function_exists("yaml_parse"))
+	$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+else 
+	include("config.php");
 
 include(plugin_dir_path( __FILE__ )."/api/SimpleApiClient.php");
 wp_enqueue_script("jquery");
