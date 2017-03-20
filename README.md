@@ -20,7 +20,8 @@ and will most likeley not work on discount-offerings, minimal requirements:
 
 === Changelog ===
 
-20/3/2017 : 	Added alternate config-file for legacy support. If no pecl-yaml module
+20/3/2017 : 	WioShop-1.1Beta.zip
+		Added alternate config-file for legacy support. If no pecl-yaml module
 		exists, config.php will be loaded in its place and config.yaml will be
 		ignored.
 
