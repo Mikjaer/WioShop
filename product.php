@@ -28,7 +28,7 @@ img {
 </style>
 <?php
 session_start();
-	$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+	global $wio_config;
 	$request = new SimpleApiClient();
 	$request->endpoint($wio_config["global"]["endpoint"]."equipment/".$_REQUEST["product"]);
 

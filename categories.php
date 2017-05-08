@@ -21,10 +21,10 @@
 
 <div id="shop-container">
 <?
-
-
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
-
+global $wio_config;
+#require_once("config.php");
+	#print_r($wio_config);
+	#print $wio_config["global"]["apikey"];
 if (isset($_REQUEST["parent"]))
 	$parent = $_REQUEST["parent"];
 else

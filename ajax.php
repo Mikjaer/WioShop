@@ -2,10 +2,10 @@
 session_start();
 
 include("api/SimpleApiClient.php");
-$wio_config = yaml_parse(file_get_contents("config.yaml"));
+include("config.php");
+$wio_config = wio_config(); 
 
-
-switch ($_REQUEST["action"])
+switch (@$_REQUEST["action"])
 {
 	case "validateemail":
 		if ($_REQUEST["email"] == $_SESSION["authed"]["email"])
@@ -19,7 +19,6 @@ switch ($_REQUEST["action"])
 		$request->endpoint($wio_config["global"]["endpoint"].'customers?filter[]=equals(email,"'.$_REQUEST["email"].'")');
 
 		$request->requestTypeGet()->addHeader("X-API-Auth: ".$wio_config["global"]["apikey"]);;
-
 		$results = $request->perform();
 		
 		if (isset($results[0]))

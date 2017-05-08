@@ -52,11 +52,7 @@ $lines = 0;
 foreach ( $_SESSION["cart"] as $productid=>$amount)
 {
 
-
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
-
-	
-
+	global $wio_config;
 
 	$request = new SimpleApiClient();
 	$request->endpoint($wio_config["global"]["endpoint"]."equipment/". $productid);

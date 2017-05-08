@@ -3,7 +3,7 @@
 	function wio_config()
 	{
 		$config["global"]["endpoint"]="https://mike42.wrtcloud.com/api/v1.0/";
-		$config["global"]["apikey"]="04cbec6904b81eeb58608f5b9cd0c7d6";
+			$config["global"]["apikey"]="af60716ca59276bcb48742ed8007b60f";
 		$config["global"]["shop_max_days"]="5";
 		$config["global"]["date_format"]="mm/dd/yy";
 		
@@ -35,7 +35,5 @@
 		return $config;
 	}
 
-
-	$wio_config = wio_config();
 
 ?>

@@ -1,6 +1,5 @@
 <?php
-
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+	global $wio_config;
 	$request = new SimpleApiClient();
 	$request->endpoint($wio_config["global"]["endpoint"]. 'customers?filter[]=equals(email,"'.$_REQUEST["email"].'")');
 	$request->requestTypeGet()->addHeader("X-API-Auth: ".$wio_config["global"]["apikey"]);;
@@ -69,7 +68,7 @@ $wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.ya
 	}
 
 // bookingStart 12:00 bookingEnd 11:00
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+	global $wio_config;
 	#print_r($_SESSION);
 
 	$request = new SimpleApiClient();
@@ -126,7 +125,7 @@ else
 
 print "Thanks for your order, it has been assignet order #".$results["rowId"].", you will shortly receive and e-mail containing further details. Click <a href='javascript:alert(\"Not yet ready\");'>here</a> to pay through Paypall..";
 
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+global $wio_config;
 ?>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
   <input type="hidden" name="cmd" value="_xclick">

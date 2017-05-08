@@ -1,7 +1,7 @@
 ---
 global:
   endpoint: https://mike42.wrtcloud.com/api/v1.0/
-  apikey: 53d490a43366bcbc80fbfab1b987d052
+  apikey: 04cbec6904b81eeb58608f5b9cd0c7d6
   shop_max_days: 5
   date_format: mm/dd/yy
 #  date_format: dd/mm/yy
@@ -9,7 +9,7 @@ payment:
   paypal: payment@kogtiroen.dk
 postage:
   name: Afhetning p&aring; vores lager
-  description: Afhentning foregår i tidsrummet mellem 19 og 42 i Vridsl&oslash;selille statsf&aeligngsel.
+  description: Afhentning foregår i tidsrummet mellem 19 og 42 i Ringsted.
   zones:
     - name: Udbringning, Sj&aelig;lland
       description: Vi leverer og afhenter efter nærmere aftale i 3 timers intervaller mellem 9 og 17. Natafhentning kan aftales mod merpris.

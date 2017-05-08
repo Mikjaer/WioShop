@@ -105,7 +105,7 @@ function fail(field,msg)
 	jQuery("html,body").animate({
 		scrollTop: (jQuery(field).offset().top - 300)
 	},1500);
-	alert(msg);
+	alert("aaa:"+msg);
 
 	return false;
 }

@@ -1,5 +1,5 @@
 <?php
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+global $wio_config;
 include("genpas.php");
 if ($_REQUEST["posted"])
 {

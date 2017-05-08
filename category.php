@@ -37,7 +37,8 @@ font-weight: 900;
 
 #$endpoint = "https://mike42.wrtcloud.com/api/v1.0/equipment/?filter[]=equals(categoryID,".$_REQUEST["showcat"].")";
 
-	$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
+	global $wio_config;
+
 	$request = new SimpleApiClient();
 	$request->endpoint($wio_config["global"]["endpoint"]."equipment/?filter[]=equals(categoryID,".$_REQUEST["showcat"].")");
 	$request->requestTypeGet()->addHeader("X-API-Auth: ".$wio_config["global"]["apikey"]);;

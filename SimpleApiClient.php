@@ -46,7 +46,7 @@
 			if ($ret = json_decode($this->result,true))
 				return $ret;
 			else
-				die("ERROR: $this->result");;
+				die("Payload: ".$this->payload."\nERROR: $this->result");;
 			return json_decode($this->result,true);
 		}
 	}

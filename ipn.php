@@ -2,8 +2,8 @@
 
 // Verifying IPN
 
-$wio_config = yaml_parse(file_get_contents(plugin_dir_path(__FILE__)."/config.yaml"));
-
+include("config.php");
+$wio_config = wio_config(); 
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL,"https://ipnpb.paypal.com/cgi-bin/webscr");
