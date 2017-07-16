@@ -11,9 +11,11 @@ and will most likeley not work on discount-offerings, minimal requirements:
   - Json
   - Outgoing traffic allowed
 
-1: Install zip into /wp-content/plugins/WioShop and activate plugin through WordPress 
-2: Create a blank page and insert the shortcode [shop]
-3: Menu-items to categories can be created like so: /?shop=categories&parent=100
+1: Install zip into /wp-content/plugins/WioShop 
+2: Alter the config.php file and add the endpoint url for your system
+3: ... and a valid API Key for your system.
+4: And activate plugin through WordPress 
+5: Create a blank page and insert the shortcode [shop]
+6: Menu-items to categories can be created like so: /?shop=categories&parent=100
    - Asuming that the default-page on the site contains the [shop]-shortcode
-4: Config-file is config.php, should be mostly self-explanatory
 
