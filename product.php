@@ -24,7 +24,24 @@ img {
 }
 .clear {
 	clear: both;
-}				
+}
+.gallery {
+	float: left;
+	clear: left;
+	padding-top: 10px;
+}
+.gallery img {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+.gallery img:hover {
+	border: 2px solid blue;
+	padding: 3px;
+}
+.prodtop {
+	float: left;
+}
 </style>
 <?php
 session_start();
@@ -35,11 +52,31 @@ session_start();
 	$request->requestTypeGet()->addHeader("X-API-Auth: ".$wio_config["global"]["apikey"]);;
 
 	$results = $request->perform();
-global $wio_config;
+
+	$gallery = new SimpleApiClient();
+	$gallery->endpoint($wio_config["global"]["endpoint"]."gallery/?filter[]=equals(equipmentID,".$_REQUEST["product"].")");
+	$gallery->requestTypeGet()->addHeader("X-API-Auth: ".$wio_config["global"]["apikey"]);;
+	$gallery = $gallery->perform();
+#print "<pre>"; print_r($gallery); die();
 ?>
 <div class=product>
-	<img src="<?=$results["shopImage"];?>">
+	<div class=prodtop>
+		<img src="<?=$results["shopImage"];?>">
 
+		<div class=gallery>
+<?
+	$i=0;
+	foreach ($gallery as $image)
+	{
+		print "<img src='$image[image]'>";
+		$i++;
+		if ($i % 3 == 0)
+			print "<br>";
+	}
+
+?>
+		</div>
+	</div>
 	<div class=details>
 		<h2> <?=$results["equipmentName"]?> </h2>
 <br/>
